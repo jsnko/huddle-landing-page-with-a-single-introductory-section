@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root{
+--Violet: hsl(257, 40%, 49%);
+--Soft-Magenta: hsl(300, 69%, 71%);
+--White: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('./images/bg-desktop.svg') no-repeat center center fixed var(--Violet);
+  font-family: 'Open Sans', sans-serif; 
+  color: var(--White);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  padding: 0.7rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo{
+    width: 7.5rem;
+    height: 4rem;
+}
+ 
+main {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.img-box{
+  max-width: 37rem;
+  width: 100%;
+  height: 22rem;
+  background: url('illustration-mockups.svg') no-repeat center;
+ background-size: 100% 100%;
+}
+ 
+.content-box {
+  width: 100%;
+  height:auto;
+  padding: 1rem;
+}
+
+.content-box h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.content-box p {
+  margin: 1.8rem 0;
+  letter-spacing: 0.05rem;
+  font-weight: 400;
+  font-size: 0.9375rem;
+}
+
+.content-box .btn{
+     background-color: var(--White);
+     padding: 1rem 5rem;
+     border-radius: 2.5rem;
+     color: var(--Violet);
+ }
+
+ .content-box .btn:hover{
+     background-color: var(--Soft-Magenta);
+ }
+
+.footer{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: end;
+    margin: 2rem 0;
+}
+
+.footer a{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+.footer a img{
+    width: 100%;
+    height: 100%;
+}
+
+.footer a:hover{
+    background-color: var(--Soft-Magenta);
+}
+
+@media (min-width: 265px) and (max-width: 500px){
+    body{
+       background: url('bg-mobile.svg') no-repeat center center fixed var(--Violet);
+       pointer-events: none;
+    }
+  
+
+  main{
+      height: auto;
+      flex-direction: column;
+      text-align: center;
+  }
+ 
+  .footer{
+      justify-content: center;
+  }
+}
